@@ -19,78 +19,100 @@
 
 	<!-- Theme CSS -->  
 	<link id="theme-style" rel="stylesheet" href="assets/css/theme.css"><style>
-  /* === Paleta base === */
+		  /* === Paleta base === */
   :root{
-    --bs-primary: #f7cc00;              /* amarillo */
+    --bs-primary: #1f2a4e;              /* amarillo */
     --bs-primary-rgb: 247,204,0;
-    --bs-link-color: #1c2b4e;           /* color de texto/enlaces */
+    --bs-link-color: #f2cb08;           /* color de texto/enlaces */
     --bs-link-hover-color: #1a2746;     /* hover un poco más oscuro */
-  }
 
-  /* === Textos (negro/blanco -> #1c2b4e) === */
-  body, p, li, small, .lead,
-  h1,{
-    color: #ffffff; !important;
-  }
-  h2, h3, h4, h5, h6{
-    color: #1c2b4e; !important;
-  }
-  .text-dark, .text-black, .text-white, .text-light, .text-muted{
-    color:#1c2b4e !important;
-  }
-  a{ color:#1c2b4e !important; }
-  a:hover, a:focus{ color:#1a2746 !important; }
-
-  /* === “Celestes” a primario (amarillo) === */
-  .text-primary{ color:#f7cc00 !important; }
-  .bg-primary, .theme-bg-primary{ background-color:#f7cc00 !important; }
-  .border-primary{ border-color:#f7cc00 !important; }
-
-  /* Botones primarios */
-  .btn-primary{
-    background-color:#f7cc00 !important;
-    border-color:#f7cc00 !important;
-    color:#1c2b4e !important;
-  }
-  .btn-primary:hover, .btn-primary:focus{
-    background-color:#dfb800 !important;
-    border-color:#dfb800 !important;
+	  /* === Textos (negro/blanco -> #1c2b4e) === */
+  h3, h4, h5, h6{
     color:#1c2b4e !important;
   }
 
-  /* Botón outline primario */
-  .btn-outline-primary{
-    color:#1c2b4e !important;
-    border-color:#f7cc00 !important;
-  }
-  .btn-outline-primary:hover, .btn-outline-primary:focus{
-    background-color:#f7cc00 !important;
-    border-color:#f7cc00 !important;
-    color:#1c2b4e !important;
+  /* 1) Barras/Secciones "celestes" -> azul #1f2a4e */
+  .bg-primary,
+  .theme-bg-primary,
+  .section.theme-bg-primary,
+  .stats-block {
+    background-color:#1f2a4e !important;
+    color:#ffffff !important; /* color de texto por defecto dentro */
   }
 
-  /* Componentes comunes que suelen venir en azul/celeste */
-  .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
-    background-color:#f7cc00 !important; color:#1c2b4e !important;
+  /* 2) Texto y enlaces DENTRO de esas barras */
+  .bg-primary h1, .bg-primary h2, .bg-primary h3, .bg-primary h4, .bg-primary h5, .bg-primary h6,
+  .bg-primary p, .bg-primary .lead, .bg-primary a,
+  .theme-bg-primary h1, .theme-bg-primary h2, .theme-bg-primary h3, .theme-bg-primary h4, .theme-bg-primary h5, .theme-bg-primary h6,
+  .theme-bg-primary p, .theme-bg-primary .lead, .theme-bg-primary a,
+  .stats-block .number, .stats-block .unit, .stats-block p,
+  .stats-block a {
+    color:#f2cb08 !important;
   }
-  .form-check-input:checked{ background-color:#f7cc00 !important; border-color:#f7cc00 !important; }
-  .progress-bar{ background-color:#f7cc00 !important; }
-  .badge.bg-primary, .badge.text-bg-primary{
-    background-color:#f7cc00 !important; color:#1c2b4e !important;
+  .bg-primary a:hover, .theme-bg-primary a:hover, .stats-block a:hover{
+    color:#ffffff !important; /* un toque más oscuro al hover */
+    text-decoration:none;
   }
-  .list-group-item.active{
-    background-color:#f7cc00 !important; border-color:#f7cc00 !important; color:#1c2b4e !important;
-  }
-  .nav-tabs .nav-link.active{
-    color:#1c2b4e !important;
-    border-color:#f7cc00 #f7cc00 transparent !important;
+  /* (opcional) bordes/HR dentro de barras */
+  .bg-primary .border, .theme-bg-primary .border, .stats-block .border,
+  .bg-primary hr, .theme-bg-primary hr, .stats-block hr{
+    border-color:#f2cb08 !important;
   }
 
-  /* === EXCEPCIONES de contraste (recomendado) ===
-     Mantén enlaces de navbar en claro si tu barra tiene fondo oscuro/#1c2b4e */
-  .navbar-dark .navbar-brand,
-  .navbar-dark .navbar-nav .nav-link{
-    color:#ffffff !important; /* o el que ya uses en esa barra */
+  /* 3) Texto sobre fondo claro/blanco -> azul #1f2a4e */
+  body{ color:#1f2a4e; }
+  .bg-white, .card, .container, .content, .section:not(.theme-bg-primary){
+    color:#1f2a4e;
+  }
+  a{ color:#1f2a4e; }
+  a:hover, a:focus{ color:#1f2a4e; }
+
+  /* 4) Por si alguna “barra” está marcada con utilidades */
+  .text-bg-primary{ background-color:#1f2a4e !important; color:#f2cb08 !important; }	
+  /* Sobre la sección "Sobre La PUCP"
+    /* 1) Todo el contenido de "Sobre la PUCP" en blanco */
+  #venue-section, 
+  #venue-section *{
+    color:#ffffff !important;
+  }
+    h5.title{
+    position:relative; 
+    display:inline-block; 
+    color:#f2cb08;            /* mantiene el texto en amarillo si lo deseas */
+}
+  /* 2) Solo el título en amarillo (#f2cb08)
+     (cubre los casos típicos de este template) */
+  #venue-section .section-heading,
+  #venue-section h3.section-heading,
+  #venue-section h3:first-of-type{
+    color:#ffffff !important;
+  }
+
+  /* 3) Enlaces dentro de la sección (blancos y con hover suave) */
+  #venue-section a{ color:#ffffff !important; }
+  #venue-section a:hover, 
+  #venue-section a:focus{ color:#e6e6e6 !important; text-decoration:none; }
+
+  /* en materia de Calendarios
+    /* Calendario: pestaña ACTIVA */
+  #schedule-section .nav-pills .nav-link.active{
+    background-color:#1f2a4e !important;  /* reemplaza el celeste */
+    border-color:#1f2a4e !important;
+    color:#f2cb08 !important;              /* texto en amarillo */
+  }
+  /* Subtextos dentro de la pestaña activa (fecha, small, etc.) */
+  #schedule-section .nav-pills .nav-link.active small,
+  #schedule-section .nav-pills .nav-link.active .text-muted,
+  #schedule-section .nav-pills .nav-link.active .meta{
+    color:#f2cb08 !important;
+    opacity:1 !important;
+  }
+
+  /* Opcional: mantener mismo color al pasar el mouse si ya está activa */
+  #schedule-section .nav-pills .nav-link.active:hover,
+  #schedule-section .nav-pills .nav-link.active:focus{
+    background-color:#1f2a4e !important;
+    color:#f2cb08 !important;
   }
 </style>
 
@@ -173,7 +195,8 @@
 			<div class="hero-text-block">
 				<h1 class="hero-heading mb-1" style="color:#ffffff">PUCP MUN 2025</h1>
 				<div class="hero-meta mb-3"><i class="far fa-calendar-alt me-2"></i>14 - 16 Nov <i class="fas fa-map-marker-alt mx-2"></i>Pontificia Universidad Católica del Perú</div>
-				<div class="hero-intro mb-4">The #1 Bootstrap Template for <br>Tech Conferences and Events.</div>
+				<div class="hero-intro mb-4" style="text-align:justify">El Modelo de Naciones Unidas más importante <br>del país en la Pontificia Universidad Católica del Perú.</div>
+				<div class="section-intro single-col-max mx-auto mb-4" style="text-align:justify"><strong>Cerrando brechas, forjando futuros.</div>
 				<div class="hero-cta"><style>
   .hero-cta .btn.btn-primary{
     background-color:#f7cc00 !important;
@@ -196,12 +219,12 @@
 	<div class="stats-block theme-bg-primary text-white py-4 text-center"><style>
   /* Cambia el fondo de la barra de Attendees/Days/Talks */
   .stats-block{
-    background-color:#f7cc00 !important; /* tu color */
+    background-color:#1f2a4e !important; /* tu color */
   }
   /* Asegura el contraste del texto */
   .stats-block .number,
   .stats-block .unit{
-    color:#1c2b4e !important;
+    color:#f2cb08 !important;
   }
 </style>
 		<div class="container">
@@ -215,7 +238,7 @@
 				<div class="col-6 col-md-3">
 					<div class="item">
 						<div class="number">3</div>
-						<div class="unit">Days</div>
+						<div class="unit">Días</div>
 					</div><!--//item-->
 				</div><!--//col-->
 				<div class="col-6 col-md-3">
@@ -330,7 +353,7 @@
 
 	<section id="venue-section" class="venue-section section  theme-bg-primary text-white">
 		<div class="container">
-			<h3 class="section-heading text-center mb-5 text-white">Sobre la PUCP</h3>
+			<h3 class="section-heading text-center mb-3 text-white">Sobre la PUCP</h3>
 			<div class="row gx-5 py-lg-5">
 				<div class="col-12 col-lg-7 h-100">
 					<div class="desc">
