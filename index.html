@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+	<title>PUCP MUN 2025</title>
+	
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Bootstrap 5 Tech Conference Template">
+	<meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+	<link rel="shortcut icon" href="favicon.ico"> 
+	
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800|Roboto:300,400,700&display=swap" rel="stylesheet">
+	
+	<!-- FontAwesome JS-->
+	<script defer src="assets/fontawesome/js/all.min.js"></script>
+
+	<!-- Theme CSS -->  
+	<link id="theme-style" rel="stylesheet" href="assets/css/theme.css"><style>
+  /* === Paleta base === */
+  :root{
+    --bs-primary: #f7cc00;              /* amarillo */
+    --bs-primary-rgb: 247,204,0;
+    --bs-link-color: #1c2b4e;           /* color de texto/enlaces */
+    --bs-link-hover-color: #1a2746;     /* hover un poco más oscuro */
+  }
+
+  /* === Textos (negro/blanco -> #1c2b4e) === */
+  body, p, li, small, .lead,
+  h1,{
+    color: #ffffff; !important;
+  }
+  h2, h3, h4, h5, h6{
+    color: #1c2b4e; !important;
+  }
+  .text-dark, .text-black, .text-white, .text-light, .text-muted{
+    color:#1c2b4e !important;
+  }
+  a{ color:#1c2b4e !important; }
+  a:hover, a:focus{ color:#1a2746 !important; }
+
+  /* === “Celestes” a primario (amarillo) === */
+  .text-primary{ color:#f7cc00 !important; }
+  .bg-primary, .theme-bg-primary{ background-color:#f7cc00 !important; }
+  .border-primary{ border-color:#f7cc00 !important; }
+
+  /* Botones primarios */
+  .btn-primary{
+    background-color:#f7cc00 !important;
+    border-color:#f7cc00 !important;
+    color:#1c2b4e !important;
+  }
+  .btn-primary:hover, .btn-primary:focus{
+    background-color:#dfb800 !important;
+    border-color:#dfb800 !important;
+    color:#1c2b4e !important;
+  }
+
+  /* Botón outline primario */
+  .btn-outline-primary{
+    color:#1c2b4e !important;
+    border-color:#f7cc00 !important;
+  }
+  .btn-outline-primary:hover, .btn-outline-primary:focus{
+    background-color:#f7cc00 !important;
+    border-color:#f7cc00 !important;
+    color:#1c2b4e !important;
+  }
+
+  /* Componentes comunes que suelen venir en azul/celeste */
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color:#f7cc00 !important; color:#1c2b4e !important;
+  }
+  .form-check-input:checked{ background-color:#f7cc00 !important; border-color:#f7cc00 !important; }
+  .progress-bar{ background-color:#f7cc00 !important; }
+  .badge.bg-primary, .badge.text-bg-primary{
+    background-color:#f7cc00 !important; color:#1c2b4e !important;
+  }
+  .list-group-item.active{
+    background-color:#f7cc00 !important; border-color:#f7cc00 !important; color:#1c2b4e !important;
+  }
+  .nav-tabs .nav-link.active{
+    color:#1c2b4e !important;
+    border-color:#f7cc00 #f7cc00 transparent !important;
+  }
+
+  /* === EXCEPCIONES de contraste (recomendado) ===
+     Mantén enlaces de navbar en claro si tu barra tiene fondo oscuro/#1c2b4e */
+  .navbar-dark .navbar-brand,
+  .navbar-dark .navbar-nav .nav-link{
+    color:#ffffff !important; /* o el que ya uses en esa barra */
+  }
+</style>
+
+
+
+</head> 
+
+<body>    
+	<header id="header" class="header fixed-top"><style>
+  /* Fondo de la barra superior */
+  #header.header{
+    background-color:#1c2b4e !important;
+  }
+
+  /* (Opcional) menú móvil / offcanvas */
+  .offcanvas,
+  .dropdown-menu{
+    background-color:#1c2b4e !important;
+  }
+</style>	    
+		<div class="branding">
+			<div class="container-fluid">
+				<nav class="main-nav navbar navbar-expand-lg">
+					<div class="site-logo"><a class="scrollto" href="#hero-block"><img class="logo-icon" src="assets/images/logo-white.png" alt="logo"></a></div>    
+					
+					<div class="navbar-btn order-lg-2"><style>
+  .btn-secondary{
+    background-color:#f7cc00!important;
+    border-color:#f7cc00!important;
+    color:#1c2b4e!important;
+  }
+  .btn-secondary:hover,
+  .btn-secondary:focus{
+    background-color:#f7cc00!important;
+    border-color:#f7cc00!important;
+    color:#1c2b4e!important;
+  }
+</style><a class="btn btn-secondary" href="http://www.linktr.ee/pucpmun25" target="_blank">Inscríbete Aquí</a></div>
+					
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					
+					<div id="navigation" class="navbar-collapse collapse  justify-content-lg-end me-lg-3"><style>
+  /* Solo estos 4 ítems del menú */
+  #header .navbar-nav .nav-link[href="#about-section"],
+  #header .navbar-nav .nav-link[href="#schedule-section"],
+  #header .navbar-nav .nav-link[href="#tickets-section"],
+  #header .navbar-nav .nav-link[href="#venue-section"]{
+    color:#ffffff !important;          /* texto blanco */
+  }
+</style>
+						<ul class="nav navbar-nav">
+							
+							<li class="nav-item"><a class="nav-link scrollto" href="#about-section">Acerca de</a></li>                                              
+							<li class="nav-item"><a class="nav-link scrollto" href="#schedule-section">Calendario</a></li>
+							<li class="nav-item"><a class="nav-link scrollto" href="#venue-section">Locación</a></li>
+						</ul><!--//nav-->
+					</div><!--//navabr-collapse-->
+
+				</nav><!--//main-nav-->
+				
+			</div><!--//container-->
+		</div><!--//branding-->
+	</header><!--//header-->
+	
+	<div id="hero-block" class="hero-block">
+		<div id="hero-carousel" class="hero-carousel carousel slide carousel-fade" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item-1 carousel-item active">
+				</div>
+				<div class="carousel-item-2 carousel-item">
+				</div>
+				<div class="carousel-item-3 carousel-item">
+				</div>
+			</div>
+		</div>
+		<div class="hero-block-mask"></div>
+		<div class="container">
+			<div class="hero-text-block">
+				<h1 class="hero-heading mb-1" style="color:#ffffff">PUCP MUN 2025</h1>
+				<div class="hero-meta mb-3"><i class="far fa-calendar-alt me-2"></i>14 - 16 Nov <i class="fas fa-map-marker-alt mx-2"></i>Pontificia Universidad Católica del Perú</div>
+				<div class="hero-intro mb-4">The #1 Bootstrap Template for <br>Tech Conferences and Events.</div>
+				<div class="hero-cta"><style>
+  .hero-cta .btn.btn-primary{
+    background-color:#f7cc00 !important;
+    border-color:#f7cc00 !important;
+    color:#1c2b4e !important;
+  }
+  .hero-cta .btn.btn-primary:hover,
+  .hero-cta .btn.btn-primary:focus{
+    background-color:#f7cc00 !important;
+    border-color:#f7cc00 !important;
+    color:#ffffff !important;
+  }
+</style><a class="btn btn-primary btn-lg" href="http://www.linktr.ee/pucpmun25" target="_blank">Inscríbete aquí</a></div>
+				
+			</div><!--//hero-text-block-->
+		</div><!--//container-->
+
+	</div><!--//hero-block-->
+	
+	<div class="stats-block theme-bg-primary text-white py-4 text-center"><style>
+  /* Cambia el fondo de la barra de Attendees/Days/Talks */
+  .stats-block{
+    background-color:#f7cc00 !important; /* tu color */
+  }
+  /* Asegura el contraste del texto */
+  .stats-block .number,
+  .stats-block .unit{
+    color:#1c2b4e !important;
+  }
+</style>
+		<div class="container">
+			<div class="row">
+				<div class="col-6 col-md-3">
+					<div class="item">
+						<div class="number">20+</div>
+						<div class="unit">Comités</div>
+					</div><!--//item-->
+				</div><!--//col-->
+				<div class="col-6 col-md-3">
+					<div class="item">
+						<div class="number">3</div>
+						<div class="unit">Days</div>
+					</div><!--//item-->
+				</div><!--//col-->
+				<div class="col-6 col-md-3">
+					<div class="item">
+						<div class="number">30+</div>
+						<div class="unit">Delegaciones</div>
+					</div><!--//item-->
+				</div><!--//col-->
+				<div class="col-6 col-md-3">
+					<div class="item">
+						<div class="number">800+</div>
+						<div class="unit">Delegados</div>
+					</div><!--//item-->
+				</div><!--//col-->
+			</div>
+		</div><!--//container-->
+	</div><!--//stats-block-->
+
+	<section id="about-section" class="about-section section theme-bg-light">
+		<div class="container">
+			<h3 class="section-heading text-center mb-3">Sobre PUCP MUN 2025</h3>
+			<div class="section-intro single-col-max mx-auto mb-4" style="text-align:justify">
+  <p>
+    El Modelo de Naciones Unidas en la Pontificia Universidad Católica del Perú (PUCP MUN) surgió en 2012, con la 
+    <strong>Asociación Civil Internacia, junto a la Facultad de Ciencias Sociales</strong> 
+    como un mecanismo de crear un espacio para el debate y la práctica diplomática dentro de la Universidad. 
+    Ese entusiasmo inicial pronto se convirtió en un proyecto concreto, en el que se buscó no solo replicar la experiencia, 
+    sino también institucionalizarla en la vida académica de la comunidad universitaria.
+  </p>
+
+  <p>
+    Hoy, más de una década después, PUCP MUN, 
+    <strong>respaldada por la Facultad de Ciencias Sociales y la Oficina de Admisión de la PUCP</strong>, 
+    recibe alrededor de 
+    <strong>1000 participantes cada año, consolidándose como una de las conferencias de MUN más importantes del país</strong>. 
+    A lo largo de sus ediciones, ha formado a estudiantes escolares y universitarios en liderazgo, negociación e investigación, 
+    manteniendo vivo el lema desde sus orígenes: 
+    <strong>Cerrando brechas, forjando futuros.</strong>
+  </p>
+</div>
+			<div class="event-countdown text-center mb-3">		   
+				<h4 class="countdown-intro mb-2 text-center mb-3">La Conferencia abre sesión en:</h4>
+				<div id="countdown-box" class="countdown-box"></div>
+			</div><!--//event-countdown-->
+			<div class="about-cta text-center mb-5"><a class="btn btn-secondary btn-lg  mb-5" href="http://www.linktr.ee/pucpmun25" target="_blank">Inscríbete Aquí</a></div>
+		</div><!--//container-->
+
+		<div class="media-block theme-bg-primary py-5">
+			<div class="container">
+				<h4 class="text-white text-center mb-3">Ediciones anteriores</h4>
+				<div class="section-intro text-center single-col-max mx-auto text-white mb-5">A lo largo de 14 ediciones del PUCPMUN, hemos vivido diferentes anécdotas y momentos mágicos, descubre un poco más a través de los siguientes videos de nuestras conferencias anteriores.</div>
+				<div class="row gx-md-5">
+					<div class="col-12 col-md-6 mb-3">
+						<div class="ratio ratio-16x9">
+							
+							<iframe src="https://www.youtube.com/embed/C2jl6BXQq-Q" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div><!--//embed-responsive -->
+					</div><!--//col-->
+					<div class="col-12 col-md-6 mb-md-5">
+						<div class="ratio ratio-16x9">
+							<iframe src="https://www.youtube.com/embed/Pfn6au2vcGg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div><!--//embed-responsive -->
+					</div><!--//col-->
+				</div><!--//row-->
+			</div><!--//container-->
+		</div><!--//media-block-->
+	</section><!--//about-section-->
+	
+	<div class="container">
+		<hr>
+	</div>
+	
+	<section id="schedule-section" class="schedule-section section">
+		<div class="container">
+			<h3 class="section-heading text-center mb-5">Calendario de la Conferencia</h3>
+			
+			<!-- Nav tabs -->
+			<ul class="schedule-nav nav nav-pills nav-fill" id="myTab" role="tablist">
+				<li class="nav-item me-2">
+					<a class="nav-link active" id="tab-1" data-bs-toggle="tab" href="#tab-1-content" role="tab" aria-controls="tab-1-content" aria-selected="true">
+						<span class="heading">Día 1</span>
+						<span class="meta">(Vie, 14 de nov)</span>
+					</a>
+				</li>
+				<li class="nav-item me-2">
+					<a class="nav-link" id="tab-2" data-bs-toggle="tab" href="#tab-2-content" role="tab" aria-controls="tab-2-content" aria-selected="false">
+						<span class="heading">Día 2</span>
+						<span class="meta">(Sab, 15 de nov)</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" id="tab-3" data-bs-toggle="tab" href="#tab-3-content" role="tab" aria-controls="tab-3-content" aria-selected="false">
+						<span class="heading">Día 3</span>
+						<span class="meta">(Dom, 16 de nov)</span>
+					</a>
+				</li>
+			</ul>
+			<!-- Tab panes -->
+			<div class="schedule-tab-content tab-content">
+				<div class="tab-pane no-timeline" id="tab-1-content" role="tabpanel" aria-labelledby="tab-2">
+					<h4 class="text-center py-5 text-light">Muy pronto el calendario del Día 1</h4>
+									</div><!--//tab-1-content-->
+				<div class="tab-pane no-timeline" id="tab-2-content" role="tabpanel" aria-labelledby="tab-2">
+					<h4 class="text-center py-5 text-muted">Muy pronto el calendario del Día 2</h4>
+				</div><!--//tab-2-content-->
+				<div class="tab-pane no-timeline" id="tab-3-content" role="tabpanel" aria-labelledby="tab-3">
+					<h4 class="text-center py-5 text-muted">Muy pronto el calendario del Día 3</h4>
+				</div><!--//tab-3-content-->
+			</div><!--//schedule-tab-content-->
+		</div><!--//container-->
+	</section><!--//schedule-section-->
+
+	<section id="venue-section" class="venue-section section  theme-bg-primary text-white">
+		<div class="container">
+			<h3 class="section-heading text-center mb-5 text-white">Sobre la PUCP</h3>
+			<div class="row gx-5 py-lg-5">
+				<div class="col-12 col-lg-7 h-100">
+					<div class="desc">
+						<h4 class="text-white mb-3">Campus PUCP, San Miguel</h4>
+						<p style="text-align:justify;">
+  El campus de la Pontificia Universidad Católica del Perú en San Miguel ofrece una infraestructura perfecta para una conferencia a gran escala como <strong>PUCP MUN, la conferencia de MUN más importante del Perú</strong>. Sus <strong>aulas y auditorios modernos</strong> cuentan con sonido, proyección y conectividad estables, ideales para sesiones simultáneas, plenarias y eventos protocolares. Las <strong>áreas verdes y pasillos amplios</strong> facilitan el desplazamiento entre comités, reducen la congestión y crean un entorno propicio para el intercambio académico y la diplomacia estudiantil.
+</p>
+
+<p style="text-align:justify;">
+  Además, el campus dispone de <strong>comedores y cafeterías</strong> distribuidos estratégicamente, así como <strong>accesos claramente señalizados</strong> y servicios de apoyo (impresión, bibliotecas, salas de estudio) a pocos pasos de cada salón donde se realizarán los comités. Esto garantiza que tanto los <strong>delegados, faculties y profesores</strong> tengan todo a la mano durante la jornada: alimentación, descanso, logística y recursos académicos. El resultado es una experiencia fluida, cómoda y segura, diseñada para que la organización y los participantes se concentren en lo esencial: <strong>debatir con calidad y construir acuerdos</strong>.
+</p>
+
+						<div class="row pt-3">
+							<div class="col-12 col-md-6 mb-4">
+								<div class="grid-item p-4">
+									<h5 class="text-white mb-3 title"><i class="fas fa-wifi me-2"></i>Conectividad</h5>
+									<p style="text-align:justify;">Conectividad: El campus de la PUCP ofrece WiFi estable y de alta velocidad en aulas, auditorios, bibliotecas y zonas comunes. Participantes, faculties y profesores se conectan rápidamente, habilitado para la investigación y mensajería durante la conferencia.</p><p style="text-align:justify;"></p>
+								</div><!--//grid-item-->
+							</div><!--col-->
+							<div class="col-12 col-md-6 mb-4">
+								<div class="grid-item p-4">
+									<h5 class="text-white mb-3 title"><i class="fas fa-chalkboard-teacher me-2"></i>Aulas de Estudio</h5>
+									<p style="text-align:justify;">Aulas y auditorios equipados con proyectores, audio integrado y conectividad estable. Los espacios son amplios, cómodos y ventilados, con aforo recomendado de hasta 60 personas.</p><p style="text-align:justify;"></p>
+								</div><!--//grid-item-->
+							</div><!--col-->
+							<div class="col-12 col-md-6 mb-4">
+								<div class="grid-item p-4">
+									<h5 class="text-white mb-3 title"><i class="fas fa-utensils me-2"></i>Alimentación</h5>
+									<p style="text-align:justify;">El campus ofrece comedores, cafeterías y food trucks, reduciendo tiempos de traslado y espera. Menús variados, opciones saludables y alternativas vegetarianas permiten planificar pausas entre comités. </p><p style="text-align:justify;"></p>
+								</div><!--//grid-item-->
+							</div><!--col-->
+							<div class="col-12 col-md-6 mb-4">
+								<div class="grid-item p-4">
+									<h5 class="text-white mb-3 title"><i class="fas fa-calendar me-2"></i>Eventos</h5>
+									<p style="text-align:justify;">PUCP MUN alberga una programación de eventos y actividades culturales. Esta agenda fortalece rede y promueve el liderazgo. Los participantes encuentran aprendizaje continuo, colaboración interdiscipisciplinaria y comunidad, complementando la experiencia académica y la vivencia en la PUCP.</p><p style="text-align:justify;"></p>
+								</div><!--//grid-item-->
+							</div><!--col-->
+						</div><!--//row-->
+					</div><!--//desc-->
+				</div><!--//col-->
+				<div class="col-12 col-xl-3 col-lg-4 offset-lg-1 position-relative h-100 mt-5 mt-lg-0">
+					<div class="figures-holder">
+						<div class="figure figure-1"><img class="shadow" src="assets/images/venue/venue-1.jpg" alt=""></div>
+						<div class="figure figure-2"><img class="shadow" src="assets/images/venue/venue-2.jpg" alt=""></div>
+						<div class="figure figure-3"><img class="shadow" src="assets/images/venue/venue-3.jpg" alt=""></div>
+						<div class="figure figure-4"><img class="shadow" src="assets/images/venue/venue-4.jpg" alt=""></div>
+					</div><!--//figures-holder-->
+				</div><!--//col-->
+			</div><!--//row-->
+		</div><!--//container-->
+	</section><!--//venue-section-->
+
+	<footer class="footer py-5 theme-bg-primary">
+		<div class="container text-center">
+			
+			<ul class="social-list list-inline mb-4"> 
+				<li class="list-inline-item me-3"><a href="malito: pucpmun@pucp.edu.pe"><i class="fas fa-envelope"></i></a></li>
+				<li class="list-inline-item me-3"><a href="http://www.instagram.com/pucpmun"><i class="fa-brands fa-x-twitter fa-fw"></i></a></li>
+				<li class="list-inline-item me-3"><a href="http://www.instagram.com/pucpmun"><i class="fa-brands fa-instagram fa-fw"></i></a></li>
+				<li class="list-inline-item me-0"><a href="http://www.facebook.com/pucpmun"><i class="fa-brands fa-facebook fa-fw"></i></a></li>
+			</ul><!--//social-list-->
+			
+			
+			<ul class="footer-links list-inline mx-auto mb-4">
+				<li class="list-inline-item"><a href="#">Guía del Delegado</a></li>
+				<li class="list-inline-item">|</li>
+				<li class="list-inline-item"><a href="#">Reglamento PUCPMUN</a></li>
+			</ul><!--//footer-link-->
+			
+			 <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+			<small class="copyright">Designed with <i class="fas fa-heart" style="color: #EC645E;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+			
+		</div><!--//container-->	    
+	</footer>
+	
+	<!-- Javascript -->          
+	<script src="assets/plugins/popper.min.js"></script>
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+	<script src="assets/plugins/smoothscroll.min.js"></script>
+	<script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+	<script src="assets/js/main.js"></script>
+	<script>
+/* Cuenta regresiva a 14 de noviembre (hora local Lima -05:00).
+   Ajusta la hora si quieres (ej. 09:00:00-05:00). */
+(function () {
+  var target = new Date('2025-11-14T15:00:00-05:00');  // <-- cambia fecha/hora aquí
+  var box = document.getElementById('countdown-box');
+  if (!box) return;
+
+  function pad(n){ return String(n).padStart(2,'0'); }
+
+  function tick(){
+    var now = new Date();
+    var diff = Math.max(0, target - now);
+    var s = Math.floor(diff/1000);
+    var days = Math.floor(s/86400);
+    var hrs  = Math.floor((s%86400)/3600);
+    var mins = Math.floor((s%3600)/60);
+    var secs = s%60;
+
+    box.innerHTML = `
+      <div class="row justify-content-center g-3">
+        <div class="col-auto text-center">
+          <div class="display-4 fw-bold">${pad(days)}</div>
+          <div class="small text-uppercase">Días</div>
+        </div>
+        <div class="col-auto text-center">
+          <div class="display-4 fw-bold">${pad(hrs)}</div>
+          <div class="small text-uppercase">Horas</div>
+        </div>
+        <div class="col-auto text-center">
+          <div class="display-4 fw-bold">${pad(mins)}</div>
+          <div class="small text-uppercase">Minutos</div>
+        </div>
+        <div class="col-auto text-center">
+          <div class="display-4 fw-bold">${pad(secs)}</div>
+          <div class="small text-uppercase">Segundos</div>
+        </div>
+      </div>`;
+  }
+
+  tick();
+  setInterval(tick, 1000);
+})();
+</script>
+
+</body>
+</html> 
+
