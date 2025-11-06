@@ -114,6 +114,46 @@
     background-color:#1f2a4e !important;
     color:#f2cb08 !important;
   }
+
+  /* Apariencia de la pestaña activa (igual a calendario) */
+  #myTab .nav-link.active{
+    background-color:#1f2a4e !important;
+    border-color:#1f2a4e !important;
+    color:#f2cb08 !important;
+    font-weight:700;
+  }
+    /* Replica estilos que antes dependían de .pricing */
+  #collapseEscolares .card .heading,
+  #collapseUniversitarios .card .heading{
+    background:#1f2a4e;        /* tu azul */
+    color:#f2cb08;              /* texto */
+  }
+  #collapseEscolares .card .heading h4,
+  #collapseUniversitarios .card .heading h4{
+    color:#f2cb08 !important;
+    margin:0;
+  }
+  #collapseEscolares .card .card-footer,
+  #collapseUniversitarios .card .card-footer{
+    border-top:0;
+    background:transparent;
+  }
+    /* Botón "Descarga Aquí" dentro de Comités */
+  #tickets-section .pricing .btn-primary,
+  #tickets-section .card-footer .btn.btn-primary{
+    background-color:#f7cc00 !important;  /* igual que Inscríbete Aquí */
+    border-color:#f7cc00 !important;
+    color:#1c2b4e !important;
+    font-weight:700;
+  }
+  #tickets-section .pricing .btn-primary:hover,
+  #tickets-section .card-footer .btn.btn-primary:hover,
+  #tickets-section .pricing .btn-primary:focus,
+  #tickets-section .card-footer .btn.btn-primary:focus{
+    background-color:#dfb800 !important;  /* hover un poco más oscuro */
+    border-color:#dfb800 !important;
+    color:#1c2b4e !important;
+  }
 </style>
 
 
@@ -150,7 +190,7 @@
     border-color:#f7cc00!important;
     color:#1c2b4e!important;
   }
-</style><a class="btn btn-secondary" href="http://www.linktr.ee/pucpmun25" target="_blank">Inscríbete Aquí</a></div>
+</style><a class="btn btn-secondary" href="#tickets-section">Descarga las Guías</a></div>
 					
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
@@ -209,7 +249,7 @@
     border-color:#f7cc00 !important;
     color:#ffffff !important;
   }
-</style><a class="btn btn-primary btn-lg" href="http://www.linktr.ee/pucpmun25" target="_blank">Inscríbete aquí</a></div>
+</style><a class="btn btn-primary btn-lg" href="#tickets-section">Descarga las guías</a></div>
 				
 			</div><!--//hero-text-block-->
 		</div><!--//container-->
@@ -283,7 +323,7 @@
 				<h4 class="countdown-intro mb-2 text-center mb-3">La Conferencia abre sesión en:</h4>
 				<div id="countdown-box" class="countdown-box"></div>
 			</div><!--//event-countdown-->
-			<div class="about-cta text-center mb-5"><a class="btn btn-secondary btn-lg  mb-5" href="http://www.linktr.ee/pucpmun25" target="_blank">Inscríbete Aquí</a></div>
+			<div class="about-cta text-center mb-5"><a class="btn btn-secondary btn-lg  mb-5" href="#tickets-section">Descarga las guías</a></div>
 		</div><!--//container-->
 
 		<div class="media-block theme-bg-primary py-5">
@@ -321,7 +361,7 @@
 					<a class="nav-link active" id="tab-1" data-bs-toggle="tab" href="#tab-1-content" role="tab" aria-controls="tab-1-content" aria-selected="true">
 						<span class="heading">Día 1</span>
 						<span class="meta">(Vie, 14 de nov)</span>
-					</a>
+					</a>	
 				</li>
 				<li class="nav-item me-2">
 					<a class="nav-link" id="tab-2" data-bs-toggle="tab" href="#tab-2-content" role="tab" aria-controls="tab-2-content" aria-selected="false">
@@ -336,16 +376,141 @@
 					</a>
 				</li>
 			</ul>
-			<!-- Tab panes -->
+		<!-- Tab panes -->
 			<div class="schedule-tab-content tab-content">
-				<div class="tab-pane no-timeline" id="tab-1-content" role="tabpanel" aria-labelledby="tab-2">
-					<h4 class="text-center py-5 text-light">Muy pronto el calendario del Día 1</h4>
-									</div><!--//tab-1-content-->
+				<div class="tab-pane active" id="tab-1-content" role="tabpanel" aria-labelledby="tab-1">
+					<div class="item item-talk">
+						<div class="meta">
+							<h4 class="time mb-3">14:00 - 15:00</h4>
+						</div><!--//meta-->
+						<div class="content">
+							<h3 class="title mb-3">Registro</h3>
+						</div><!--//content-->
+					</div><!--//item-->
+					<div class="item item-talk">
+						<div class="meta">
+							<h4 class="time mb-3">15:00 - 16:00</h4>
+						</div><!--//meta-->
+						<div class="content">
+							<h3 class="title mb-3">Ceremonia de Inauguración</h3>
+						</div><!--//content-->
+					</div><!--//item-->
+					<div class="item item-talk">
+						<div class="meta">
+							<h4 class="time mb-3">16:00 - 17:00</h4>
+						</div><!--//meta-->
+						<div class="content">
+							<h3 class="title mb-3">Feria de la ONU</h3>
+						</div><!--//content-->
+					</div><!--//item-->
+					<div class="item item-talk">
+						<div class="meta">
+							<h4 class="time mb-3">17:00 - 19:00</h4>
+						</div><!--//meta-->
+						<div class="content">
+							<h3 class="title mb-3">Sesión 1</h3>
+						</div><!--//content-->
+					</div><!--//item-->
+				</div><!--//tab-1-content-->
 				<div class="tab-pane no-timeline" id="tab-2-content" role="tabpanel" aria-labelledby="tab-2">
-					<h4 class="text-center py-5 text-muted">Muy pronto el calendario del Día 2</h4>
+					<div class="item item-talk">
+						<div class="meta">
+							<h4 class="time mb-3">09:00 - 10:00</h4>
+						</div><!--//meta-->
+						<div class="content">
+							<h3 class="title mb-3">Ingreso a Salones</h3>
+						</div><!--//content-->
+					</div><!--//item-->
+					<div class="item item-talk">
+						<div class="meta">
+							<h4 class="time mb-3">09:00 - 11:00</h4>
+						</div><!--//meta-->
+						<div class="content">
+							<h3 class="title mb-3">Sesión 2</h3>
+						</div><!--//content-->
+					</div><!--//item-->
+					<div class="item item-talk">
+						<div class="meta">
+							<h4 class="time mb-3">11:00 - 11:30</h4>
+						</div><!--//meta-->
+						<div class="content">
+							<h3 class="title mb-3">Break</h3>
+						</div><!--//content-->
+					</div><!--//item-->
+					<div class="item item-talk">
+						<div class="meta">
+							<h4 class="time mb-3">11:30 - 13:30</h4>
+						</div><!--//meta-->
+						<div class="content">
+							<h3 class="title mb-3">Sesión 3</h3>
+						</div><!--//content-->
+					</div><!--//item-->
+					<div class="item item-talk">
+						<div class="meta">
+							<h4 class="time mb-3">13:30 - 15:00</h4>
+						</div><!--//meta-->
+						<div class="content">
+							<h3 class="title mb-3">Lunch Break</h3>
+						</div><!--//content-->
+					</div><!--//item-->
+					<div class="item item-talk">
+						<div class="meta">
+							<h4 class="time mb-3">15:00 - 17:30</h4>
+						</div><!--//meta-->
+						<div class="content">
+							<h3 class="title mb-3">Sesión 4</h3>
+						</div><!--//content-->
+					</div><!--//item-->
+					<div class="item item-talk">
+						<div class="meta">
+							<h4 class="time mb-3">17:30 - 18:00</h4>
+						</div><!--//meta-->
+						<div class="content">
+							<h3 class="title mb-3">Break</h3>
+						</div><!--//content-->
+					</div><!--//item-->
+					<div class="item item-talk">
+						<div class="meta">
+							<h4 class="time mb-3">18:00 - 20:00</h4>
+						</div><!--//meta-->
+						<div class="content">
+							<h3 class="title mb-3">Social Event (Para escolares)</h3>
+						</div><!--//content-->
+						</div><!--//item-->
 				</div><!--//tab-2-content-->
 				<div class="tab-pane no-timeline" id="tab-3-content" role="tabpanel" aria-labelledby="tab-3">
-					<h4 class="text-center py-5 text-muted">Muy pronto el calendario del Día 3</h4>
+					<div class="item item-talk">
+						<div class="meta">
+							<h4 class="time mb-3">09:30 - 10:00</h4>
+						</div><!--//meta-->
+						<div class="content">
+							<h3 class="title mb-3">Ingreso a Salones</h3>
+						</div><!--//content-->
+					</div><!--//item-->
+					<div class="item item-talk">
+						<div class="meta">
+							<h4 class="time mb-3">10:00 - 13:00</h4>
+						</div><!--//meta-->
+						<div class="content">
+							<h3 class="title mb-3">Sesión 5</h3>
+						</div><!--//content-->
+					</div><!--//item-->
+					<div class="item item-talk">
+						<div class="meta">
+							<h4 class="time mb-3">13:00 - 14:30</h4>
+						</div><!--//meta-->
+						<div class="content">
+							<h3 class="title mb-3">Lunch Break</h3>
+						</div><!--//content-->
+					</div><!--//item-->
+					<div class="item item-talk">
+						<div class="meta">
+							<h4 class="time mb-3">14:00 - 15:00</h4>
+						</div><!--//meta-->
+						<div class="content">
+							<h3 class="title mb-3">Clausura</h3>
+						</div><!--//content-->
+					</div><!--//item-->
 				</div><!--//tab-3-content-->
 			</div><!--//schedule-tab-content-->
 		</div><!--//container-->
@@ -405,6 +570,484 @@
 			</div><!--//row-->
 		</div><!--//container-->
 	</section><!--//venue-section-->
+
+	<section id="tickets-section" class="tickets-section section theme-bg-light">
+		<div class="container">
+			<h3 class="section-heading text-center mb-3">Comités</h3>
+			<div class="section-intro single-col-max mx-auto text-center mb-4">Esta conferencia incluye 29 comités, divididos en Comités Escolares y Universitarios ¿Esperas las guías de estudio? Haz click aquí.</div>
+			<!-- NAV-PILLS que disparan los desplegables -->
+				<ul class="schedule-nav nav nav-pills nav-fill" id="myTab" role="tablist">
+  					<li class="nav-item me-2">
+   						 <a class="nav-link active" id="pill-escolares" href="#"
+       					role="tab" aria-selected="true" data-target="#collapseEscolares">
+      					<span class="heading">Escolares</span>
+    				</a>
+  				</li>
+  				<li class="nav-item">
+    					<a class="nav-link" id="pill-universitarios" href="#"
+       					role="tab" aria-selected="false" data-target="#collapseUniversitarios">
+      					<span class="heading">Universitarios</span>
+   					 </a>
+  				</li>
+			</ul>
+			<!-- CONTENEDORES COLAPSABLES -->
+			<div class="collapse show mt-3" id="collapseEscolares">
+  				<div class="row g-4" id="grid-escolares"></div>
+			</div>
+			<div class="collapse mt-3" id="collapseUniversitarios">
+ 				 <div class="row g-4" id="grid-universitarios"></div>
+			</div>
+			<div class="row pricing mb-5">
+				<div class="col-12 col-md-4 p-2 p-lg-4">
+					<div class="card rounded-0 border-0">
+						<div class="card-body p-0">
+							<div class="heading  text-center p-3">
+								<h4 class="text-white mb-0">DISEC</h4>
+							</div>
+							<div class="info p-3">
+								<div class="price-figure text-center mb-3"><span class="number">Doubles - Español</span></div>
+								<div class="desc px-3">
+									Tema: Disputa en Cachemira y la amenaza de escalada nuclear
+								</div>
+							</div><!--//info-->
+						</div><!--//card-body-->
+						<div class="card-footer text-center">
+							<a href="assets/files/escolares/DISEC.pdf"class="btn btn-primary enabled">Descarga Aquí</a>
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+				<div class="col-12 col-md-4 p-2 p-lg-4">
+					<div class="card card-special rounded-0 border-0">
+						<div class="card-body p-0">
+							<div class="heading  text-center p-3">
+								<h4 class="text-white mb-0">SOCHUM</h4>
+							</div>
+							<div class="info p-3">
+								<div class="price-figure text-center mb-3"><span class="number">Doubles - English</span></div>
+								<div class="desc px-3">
+									Tema: The responsibility of governments in protecting human rights during social protests 
+								</div>
+							</div><!--//info-->
+						</div><!--//card-body-->
+						<div class="card-footer text-center">
+							<a href="assets/files/escolares/SOCHUM.pdf" class="btn btn-primary enabled">Descarga Aquí</a>
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+				<div class="col-12 col-md-4 p-2 p-lg-4">
+					<div class="card rounded-0 border-0">
+						<div class="card-body p-0">
+							<div class="heading  text-center p-3">
+								<h4 class="text-white mb-0">Legal</h4>
+							</div>
+							<div class="info p-3">
+								<div class="price-figure text-center mb-3"><span class="number">Individual - Español</span></div>
+								<div class="desc px-3">
+									Tema: Fortalecimiento del marco jurídico internacional para la prevención del genocidio						    
+								</div>
+							</div><!--//info-->
+						</div><!--//card-body-->
+						<div class="card-footer text-center">
+							<a href="assets/files/escolares/LEGAL.pdf" class="btn btn-primary enabled">Descarga Aquí</a>
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+								<div class="col-12 col-md-4 p-2 p-lg-4">
+					<div class="card rounded-0 border-0">
+						<div class="card-body p-0">
+							<div class="heading  text-center p-3">
+								<h4 class="text-white mb-0">PNUD</h4>
+							</div>
+							<div class="info p-3">
+								<div class="price-figure text-center mb-3"><span class="number">Individual - Español</span></div>
+								<div class="desc px-3">
+									Tema: Fortalecimiento institucional para elecciones democráticas								</div>
+							</div><!--//info-->
+						</div><!--//card-body-->
+						<div class="card-footer text-center">
+							<a href="assets/files/escolares/PNUD.pdf"class="btn btn-primary enabled">Descarga Aquí</a>
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+								<div class="col-12 col-md-4 p-2 p-lg-4">
+					<div class="card rounded-0 border-0">
+						<div class="card-body p-0">
+							<div class="heading  text-center p-3">
+								<h4 class="text-white mb-0">UNESCO</h4>
+							</div>
+							<div class="info p-3">
+								<div class="price-figure text-center mb-3"><span class="number">9 Spots</span></div>
+								<div class="desc px-3">
+									Tema A: Desigualdad en el acceso a la educación intercultural en zonas rurales
+								</div>
+								<div class="desc px-3">
+									Tema B: La conservación del patrimonio cultural en el contexto de la globalización
+								</div>
+							</div><!--//info-->
+						</div><!--//card-body-->
+						<div class="card-footer text-center">
+							<a href="assets/files/escolares/UNESCO STUDY GUIDE.pdf"class="btn btn-primary enabled">Descarga Aquí</a>
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+								<div class="col-12 col-md-4 p-2 p-lg-4">
+					<div class="card rounded-0 border-0">
+						<div class="card-body p-0">
+							<div class="heading  text-center p-3">
+								<h4 class="text-white mb-0">UNICEF</h4>
+							</div>
+							<div class="info p-3">
+								<div class="price-figure text-center mb-3"><span class="number">Singles - English</span></div>
+								<div class="desc px-3">
+									Topic: Comprehensive protection of children in the face of forced displacement and the nutritional crisis in Sudan.
+								</div>
+							</div><!--//info-->
+						</div><!--//card-body-->
+						<div class="card-footer text-center">
+							<a href="assets/files/escolares/UNICEF.pdf"class="btn btn-primary enabled">Descarga Aquí</a>
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+								<div class="col-12 col-md-4 p-2 p-lg-4">
+					<div class="card rounded-0 border-0">
+						<div class="card-body p-0">
+							<div class="heading  text-center p-3">
+								<h4 class="text-white mb-0">FAO</h4>
+							</div>
+							<div class="info p-3">
+								<div class="price-figure text-center mb-3"><span class="number">Individual - Español</span></div>
+								<div class="desc px-3">
+									Tema: Transformación sostenible de los sistemas agroalimentarios para una mejor nutrición e inclusión rural								</div>
+							</div><!--//info-->
+						</div><!--//card-body-->
+						<div class="card-footer text-center">
+							<a href="assets/files/escolares/FAO.pdf"class="btn btn-primary enabled">Descarga Aquí</a>
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+								<div class="col-12 col-md-4 p-2 p-lg-4">
+					<div class="card rounded-0 border-0">
+						<div class="card-body p-0">
+							<div class="heading  text-center p-3">
+								<h4 class="text-white mb-0">UNODC</h4>
+							</div>
+							<div class="info p-3">
+								<div class="price-figure text-center mb-3"><span class="number">Singles - English</span></div>
+								<div class="desc px-3">
+									Tema: International cooperation in response to the expansion of illegal mining and illicit economies.								</div>
+							</div><!--//info-->
+						</div><!--//card-body-->
+						<div class="card-footer text-center">
+							<a href="assets/files/escolares/UNODC.pdf"class="btn btn-primary enabled">Descarga Aquí</a>
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+								<div class="col-12 col-md-4 p-2 p-lg-4">
+					<div class="card rounded-0 border-0">
+						<div class="card-body p-0">
+							<div class="heading  text-center p-3">
+								<h4 class="text-white mb-0">CSW</h4>
+							</div>
+							<div class="info p-3">
+								<div class="price-figure text-center mb-3"><span class="number">Singles - English</span></div>
+								<div class="desc px-3">
+									Tema: Strengthening maternal health and reducing mortality in developing countries, conflict zones, and under-resourced settings								</div>
+							</div><!--//info-->
+						</div><!--//card-body-->
+						<div class="card-footer text-center">
+							<a href="assets/files/escolares/CSW.pdf"class="btn btn-primary enabled">Descarga Aquí</a>
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+								<div class="col-12 col-md-4 p-2 p-lg-4">
+					<div class="card rounded-0 border-0">
+						<div class="card-body p-0">
+							<div class="heading  text-center p-3">
+								<h4 class="text-white mb-0">COP 30</h4>
+							</div>
+							<div class="info p-3">
+								<div class="price-figure text-center mb-3"><span class="number">Individual - Español</span></div>
+								<div class="desc px-3">
+								Tema: Preservación del Ártico ante el cambio climático y las tensiones geopolíticas emergentes								</div>
+							</div><!--//info-->
+						</div><!--//card-body-->
+						<div class="card-footer text-center">
+							<a href="assets/files/escolares/COP30.pdf"class="btn btn-primary enabled">Descarga Aquí</a>
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+								<div class="col-12 col-md-4 p-2 p-lg-4">
+					<div class="card rounded-0 border-0">
+						<div class="card-body p-0">
+							<div class="heading  text-center p-3">
+								<h4 class="text-white mb-0">AIIB (Asian Infrastructure Investment Bank)</h4>
+							</div>
+							<div class="info p-3">
+								<div class="price-figure text-center mb-3"><span class="number">Singles - English</span></div>
+								<div class="desc px-3">
+									Tema: Debt Dependency and Successive Borrowing in AIIB-financed Projects								</div>
+							</div><!--//info-->
+						</div><!--//card-body-->
+						<div class="card-footer text-center">
+							<a href="assets/files/escolares/AIIB.pdf"class="btn btn-primary enabled">Descarga Aquí</a>
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+								<div class="col-12 col-md-4 p-2 p-lg-4">
+					<div class="card rounded-0 border-0">
+						<div class="card-body p-0">
+							<div class="heading  text-center p-3">
+								<h4 class="text-white mb-0">OEA</h4>
+							</div>
+							<div class="info p-3">
+								<div class="price-figure text-center mb-3"><span class="number">Individual - Español</span></div>
+								<div class="desc px-3">
+									Tema: Disputas territoriales y marítimas en América Latina								</div>
+							</div><!--//info-->
+						</div><!--//card-body-->
+						<div class="card-footer text-center">
+							<a href="assets/files/escolares/OEA.pdf"class="btn btn-primary enabled">Descarga Aquí</a>
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+								<div class="col-12 col-md-4 p-2 p-lg-4">
+					<div class="card rounded-0 border-0">
+						<div class="card-body p-0">
+							<div class="heading  text-center p-3">
+								<h4 class="text-white mb-0">OIC</h4>
+							</div>
+							<div class="info p-3">
+								<div class="price-figure text-center mb-3"><span class="number">Singles - English</span></div>
+								<div class="desc px-3">
+									Tema: Tensions between sunnis and shiites in the context of governance and conflicts in the Arab World								</div>
+							</div><!--//info-->
+						</div><!--//card-body-->
+						<div class="card-footer text-center">
+							<a href="assets/files/escolares/OIC.pdf"class="btn btn-primary enabled">Descarga Aquí</a>
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+								<div class="col-12 col-md-4 p-2 p-lg-4">
+					<div class="card rounded-0 border-0">
+						<div class="card-body p-0">
+							<div class="heading  text-center p-3">
+								<h4 class="text-white mb-0">Parlamento Europeo</h4>
+							</div>
+							<div class="info p-3">
+								<div class="price-figure text-center mb-3"><span class="number">Individual - Español</span></div>
+								<div class="desc px-3">
+									Tema: Evaluación de sanciones a Israel por la guerra en Gaza y protección de ciudadanos europeos ante amenazas externas								</div>
+							</div><!--//info-->
+						</div><!--//card-body-->
+						<div class="card-footer text-center">
+							<a href="assets/files/escolares/PARLAMENTO EUROPEO.pdf"class="btn btn-primary enabled">Descarga Aquí</a>
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+								<div class="col-12 col-md-4 p-2 p-lg-4">
+					<div class="card rounded-0 border-0">
+						<div class="card-body p-0">
+							<div class="heading  text-center p-3">
+								<h4 class="text-white mb-0">Security Council</h4>
+							</div>
+							<div class="info p-3">
+								<div class="price-figure text-center mb-3"><span class="number">Doubles - English</span></div>
+								<div class="desc px-3">
+									Tema: Conflict in Papua New Guinea and its impact on international security								</div>
+							</div><!--//info-->
+						</div><!--//card-body-->
+						<div class="card-footer text-center">
+							<a href="assets/files/escolares/UNSC.pdf"class="btn btn-primary enabled">Descarga Aquí</a>
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+								<div class="col-12 col-md-4 p-2 p-lg-4">
+					<div class="card rounded-0 border-0">
+						<div class="card-body p-0">
+							<div class="heading  text-center p-3">
+								<h4 class="text-white mb-0">Gabinete Crisis Conjunta 1</h4>
+							</div>
+							<div class="info p-3">
+								<div class="price-figure text-center mb-3"><span class="number">Individual - Español</span></div>
+								<div class="desc px-3">
+									Tema: Clash Royale: Reino Azul								</div>
+							</div><!--//info-->
+						</div><!--//card-body-->
+						<div class="card-footer text-center">
+							<a href="assets/files/escolares/JCC1.pdf"class="btn btn-primary enabled">Descarga Aquí</a>
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+				<div class="col-12 col-md-4 p-2 p-lg-4">
+					<div class="card card-special rounded-0 border-0">
+						<div class="card-body p-0">
+							<div class="heading  text-center p-3">
+								<h4 class="text-white mb-0">Gabinete Crisis Conjunta 2</h4>
+							</div>
+							<div class="info p-3">
+								<div class="price-figure text-center mb-3"><span class="number">Individual - Español</span></div>
+								<div class="desc px-3">
+									Tema: Clash Royale: Reino Rojo								</div>
+							</div><!--//info-->
+						</div><!--//card-body-->
+						<div class="card-footer text-center">
+							<a href="assets/files/escolares/JCC2.pdf" class="btn btn-primary enabled">Descarga Aquí</a>
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+				<div class="col-12 col-md-4 p-2 p-lg-4">
+					<div class="card card-special rounded-0 border-0">
+						<div class="card-body p-0">
+							<div class="heading  text-center p-3">
+								<h4 class="text-white mb-0">Third Party Actors</h4>
+							</div>
+							<div class="info p-3">
+								<div class="price-figure text-center mb-3"><span class="number">Individual - Bilingüe</span></div>
+								<div class="desc px-3">
+									Cobertura del comité de Prensa  
+								</div>
+							</div><!--//info-->
+						</div><!--//card-body-->
+						<div class="card-footer text-center">
+							<a href="assets/files/escolares/TPA.pdf" class="btn btn-primary enabled">Descarga Aquí</a>
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+				<div class="col-12 col-md-4 p-2 p-lg-4">
+					<div class="card rounded-0 border-0">
+						<div class="card-body p-0">
+							<div class="heading  text-center p-3">
+								<h4 class="text-white mb-0">OIEA</h4>
+							</div>
+							<div class="info p-3">
+								<div class="price-figure text-center mb-3"><span class="number">Dobles - Español</span></div>
+								<div class="desc px-3">
+									Tema: Desafíos ante la creación de una zona libre de armas nucleares en Medio Oriente								</div>
+							</div><!--//info-->
+						</div><!--//card-body-->
+						<div class="card-footer text-center">
+							<a href="assets/files/universitarios/OIEA.pdf"class="btn btn-primary enabled">Descarga Aquí</a>
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+								<div class="col-12 col-md-4 p-2 p-lg-4">
+					<div class="card rounded-0 border-0">
+						<div class="card-body p-0">
+							<div class="heading  text-center p-3">
+								<h4 class="text-white mb-0">UNHRC</h4>
+							</div>
+							<div class="info p-3">
+								<div class="price-figure text-center mb-3"><span class="number">Singles - English</span></div>
+								<div class="desc px-3">
+									Tema: Humanitarian Aid and Protection of Populations Displaced by Climate Change								</div>
+							</div><!--//info-->
+						</div><!--//card-body-->
+						<div class="card-footer text-center">
+							<a href="assets/files/universitarios/UNHCR.pdf"class="btn btn-primary enabled">Descarga Aquí</a>
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+								<div class="col-12 col-md-4 p-2 p-lg-4">
+					<div class="card rounded-0 border-0">
+						<div class="card-body p-0">
+							<div class="heading  text-center p-3">
+								<h4 class="text-white mb-0">COP 30</h4>
+							</div>
+							<div class="info p-3">
+								<div class="price-figure text-center mb-3"><span class="number">Individual - Español</span></div>
+								<div class="desc px-3">
+									Tema: Justicia climática y resiliencia comunitaria en la Amazonía ante el cambio climático								</div>
+							</div><!--//info-->
+						</div><!--//card-body-->
+						<div class="card-footer text-center">
+							<a href="assets/files/universitarios/COP30.pdf"class="btn btn-primary enabled">Descarga Aquí</a>
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+								<div class="col-12 col-md-4 p-2 p-lg-4">
+					<div class="card rounded-0 border-0">
+						<div class="card-body p-0">
+							<div class="heading  text-center p-3">
+								<h4 class="text-white mb-0">ECOFIN</h4>
+							</div>
+							<div class="info p-3">
+								<div class="price-figure text-center mb-3"><span class="number">Individual - Español</span></div>
+								<div class="desc px-3">
+									Tema: Proteccionismo fiscal en servicios digitales								</div>
+							</div><!--//info-->
+						</div><!--//card-body-->
+						<div class="card-footer text-center">
+							<a href="assets/files/universitarios/ECOFIN.pdf"class="btn btn-primary enabled">Descarga Aquí</a>
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+								<div class="col-12 col-md-4 p-2 p-lg-4">
+					<div class="card rounded-0 border-0">
+						<div class="card-body p-0">
+							<div class="heading  text-center p-3">
+								<h4 class="text-white mb-0">European Council</h4>
+							</div>
+							<div class="info p-3">
+								<div class="price-figure text-center mb-3"><span class="number">Singles - English</span></div>
+								<div class="desc px-3">
+									Tema: Suspension of the asylum process in Greece and its impact on the EU migration policy								</div>
+							</div><!--//info-->
+						</div><!--//card-body-->
+						<div class="card-footer text-center">
+							<a href="assets/files/universitarios/EUROPEAN COUNCIL.pdf"class="btn btn-primary enabled">Descarga Aquí</a>
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+								<div class="col-12 col-md-4 p-2 p-lg-4">
+					<div class="card rounded-0 border-0">
+						<div class="card-body p-0">
+							<div class="heading  text-center p-3">
+								<h4 class="text-white mb-0">Consejo de Seguridad</h4>
+							</div>
+							<div class="info p-3">
+								<div class="price-figure text-center mb-3"><span class="number">Individual - Español</span></div>
+								<div class="desc px-3">
+									Tema: La crisis palestino-israelí: Negociación y mantenimiento de cese al fuego								</div>
+							</div><!--//info-->
+						</div><!--//card-body-->
+						<div class="card-footer text-center">
+							<a href="assets/files/universitarios/CSNU.pdf"class="btn btn-primary enabled">Descarga Aquí</a>
+						</div>
+								<div class="col-12 col-md-4 p-2 p-lg-4">
+					<div class="card rounded-0 border-0">
+						<div class="card-body p-0">
+							<div class="heading  text-center p-3">
+								<h4 class="text-white mb-0">Crisis</h4>
+							</div>
+							<div class="info p-3">
+								<div class="price-figure text-center mb-3"><span class="number">Singles - English</span></div>
+								<div class="desc px-3">
+									Tema: Iran-Iraq War (1980-1988): Iraq's cabinet								</div>
+							</div><!--//info-->
+						</div><!--//card-body-->
+						<div class="card-footer text-center">
+							<a href="assets/files/universitarios/CRISIS.pdf"class="btn btn-primary enabled">Descarga Aquí</a>
+						</div>
+								<div class="col-12 col-md-4 p-2 p-lg-4">
+					<div class="card rounded-0 border-0">
+						<div class="card-body p-0">
+							<div class="heading  text-center p-3">
+								<h4 class="text-white mb-0">Third Party Actors</h4>
+							</div>
+							<div class="info p-3">
+								<div class="price-figure text-center mb-3"><span class="number">Individual - Bilingüe</span></div>
+								<div class="desc px-3">
+									Tema: Cobertura del comité de Prensa								</div>
+							</div><!--//info-->
+						</div><!--//card-body-->
+						<div class="card-footer text-center">
+							<a href="assets/files/universitarios/TPA.pdf"class="btn btn-primary enabled">Descarga Aquí</a>
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+			</div><!--//pricing-->
+		</div><!--//container-->
+	</section><!--//tickets-section-->
 
 	<footer class="footer py-5 theme-bg-primary">
 		<div class="container text-center">
@@ -481,5 +1124,53 @@
 </script>
 
 </body>
+<script>
+(function(){
+  const section = document.getElementById('tickets-section');
+  if(!section) return;
+
+  // Destinos de tarjetas
+  const toEscolares = document.getElementById('grid-escolares');
+  const toUniversitarios = document.getElementById('grid-universitarios');
+  if(!toEscolares || !toUniversitarios) return;
+
+  // Recolecta todas las columnas de tarjetas dentro de .pricing (tal como están en tu HTML)
+  const pricingBlocks = section.querySelectorAll('.pricing');
+  const cols = [];
+  pricingBlocks.forEach(pb => cols.push(...pb.querySelectorAll('.col-12, [class*="col-"]')));
+
+  // Mueve primeras 16 a Escolares; resto a Universitarios
+  cols.forEach((col, i) => (i < 18 ? toUniversitarios : toEscolares).appendChild(col));
+
+  // Borra contenedores .pricing vacíos (por limpieza)
+  pricingBlocks.forEach(pb => { if(!pb.querySelector('[class*="col-"]')) pb.remove(); });
+
+  // NAV ↔ Collapse (píldoras disparan y mantienen “active”)
+  const pillEscol = document.getElementById('pill-escolares');
+  const pillUniv  = document.getElementById('pill-universitarios');
+  const colEscol  = document.getElementById('collapseEscolares');
+  const colUniv   = document.getElementById('collapseUniversitarios');
+
+  function setActive(pillOn, pillOff, collapseOn, collapseOff){
+    pillOn.classList.add('active');    pillOn.setAttribute('aria-selected','true');
+    pillOff.classList.remove('active');pillOff.setAttribute('aria-selected','false');
+    if (window.bootstrap && bootstrap.Collapse){
+      new bootstrap.Collapse(collapseOn, { show:true });
+      new bootstrap.Collapse(collapseOff, { hide:true });
+    } else { // Fallback por si falta JS de Bootstrap
+      collapseOn.classList.add('show');
+      collapseOff.classList.remove('show');
+    }
+  }
+
+  if (pillEscol && pillUniv){
+    pillEscol.addEventListener('click', (e)=>{ e.preventDefault(); setActive(pillEscol, pillUniv, colEscol, colUniv); });
+    pillUniv .addEventListener('click', (e)=>{ e.preventDefault(); setActive(pillUniv , pillEscol, colUniv , colEscol); });
+  }
+
+  // Estado inicial: Escolares abierto
+  if (colEscol) setActive(pillEscol, pillUniv, colEscol, colUniv);
+})();
+</script>
 </html> 
 
